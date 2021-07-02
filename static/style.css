@@ -1,0 +1,24 @@
+
+      .alert {
+        background: green;
+        padding: 1rem;
+        border-radius: 5px;
+        color: white;
+        margin: 1rem;
+      }
+
+      .resultado {
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center
+      }
+
+      .rodape {
+        border-top: 1px solid #333;
+        bottom: 0;
+        left: 0;
+        height: 40px;
+        position: fixed;
+        width: 100%;
+      }

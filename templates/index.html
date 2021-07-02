@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Calculadora Básica</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+    />
+
+    
+  </head>
+  <body>
+    <div class="container">
+      <h3>APP Calculadora Básica</h3>
+    </div>
+
+    <!-- Form -->
+    <div class="container">
+      <form action="/send" method="POST">
+        <label for="Number One">Primeiro Número</label>
+        <input
+        required
+          type="text"
+          placeholder="Primeiro Número"
+          name="num1"
+        />
+        <!-- deixar os input com tamanho full-->
+        <!--class="u-full-width"-->
+
+        <label for="Number Two">Segundo Número</label>
+        <input
+        required
+          type="text"
+          placeholder="Segundo Número"
+          name="num2"
+        />
+
+        <label for="Operation">Operação</label>
+        <select  name="operation">
+          <option value="add">SOMA</option>
+          <option value="subtract">SUBTRAÇÃO</option>
+          <option value="multiply">MULTIPLICAÇÃO</option>
+          <option value="divide">DIVISÃO</option>
+        </select>
+        <br>
+
+        <input type="submit" value="Calcular" id="calc_btn" />
+        <br />
+        <div class="resultado" >
+        <h3>Resultado</h3>
+      </div>
+        <div class="alert">
+          {{ sum }}
+        </div>
+      </form>
+    </div>
+    <footer class="rodape">
+      © 2019 Copyright: Pedro Brito
+    </footer>
+  </body>
+</html>
