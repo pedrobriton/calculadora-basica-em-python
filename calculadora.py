@@ -1,8 +1,23 @@
-from flask import Flask, render_template, request, jsonify
+from flask import Flask, render_template, request
 
+
+#########################################
+### LOGICA PARA CALCULADORA BASICA    ###
+### OPERAÇÕES BÁSICAS                 ### 
+### SOMAR                             ###
+### SUBTRAIR                          ###
+### MULTIPLICAR                       ###      
+### DIVIDIR                           ###
+#########################################
+# develope by Pedro Brito               #
+#########################################
+
+
+# instanciando a variavel app que sera referencia ao flask
 app = Flask(__name__)
 
 
+# rotas
 @app.route('/')
 def main():
     return render_template('index.html')
@@ -36,8 +51,12 @@ def send(sum=sum):
         else:
             return render_template('index.html')
 
+# falta implementar excessoes para tratar alguns possiveis erros, e melhorar 
+# o front
 
 
+# incia o app, no modo de debug
 if __name__ == '__main__':
     app.debug = True
     app.run()
+
